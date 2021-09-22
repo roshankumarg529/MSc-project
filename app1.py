@@ -98,7 +98,7 @@ def main():
     Height= st.text_input("Height(cm)", "Type Here")
     BMI = st.text_input("BMI", "Type Here")
     Upper_Leg_Length = st.text_input("Upper_Leg_Length", "Type Here")
-    
+    Upper_Arm_Length = st.text_input("Upper_Arm_Length", "Type Here")
     Arm_Circum = st.text_input("Arm_Circum", "Type Here")
     Waist_Circum = st.text_input("Waist_Circum", "Type Here")
     Triceps_Skinfold = st.text_input("Triceps_Skinfold", "Type Here")
