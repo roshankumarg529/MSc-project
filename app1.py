@@ -87,25 +87,25 @@ def main():
     </div>
     """
     st.markdown(html_temp,unsafe_allow_html=True)
-    sex = st.text_input("Variance","Type Here")
-    age = st.text_input("skewness","Type Here")
-    Race_Ethnicity = st.text_input("curtosis","Type Here")
+    sex = st.text_input("Sex","Type Here")
+    age = st.text_input("Age","Type Here")
+    Race_Ethnicity = st.text_input("Race/Ethnicity","Type Here")
 
-    income = st.text_input("entropy","Type Here")
-    On_Insulin_Dia_Meds = st.text_input("entropy", "Type Here")
-    Diag_DM_Pre_DM = st.text_input("entropy", "Type Here")
-    Weight = st.text_input("entropy", "Type Here")
-    Height= st.text_input("entropy", "Type Here")
-    BMI = st.text_input("entropy", "Type Here")
-    Upper_Leg_Length = st.text_input("entropy", "Type Here")
-    BMI = st.text_input("entropy", "Type Here")
-    Arm_Circum = st.text_input("entropy", "Type Here")
-    Waist_Circum = st.text_input("entropy", "Type Here")
-    Triceps_Skinfold = st.text_input("entropy", "Type Here")
-    Subscapular_Skinfold = st.text_input("entropy", "Type Here")
-    albumin	= st.text_input("entropy", "Type Here")
-    Blood_urea_nitrogen = st.text_input("entropy", "Type Here")
-    Creatinine = st.text_input("entropy", "Type Here")
+    income = st.text_input("Income","Type Here")
+    On_Insulin_Dia_Meds = st.text_input("On_Insulin/Dia_Meds", "Type Here")
+    Diag_DM_Pre_DM = st.text_input("Diag_DM/Pre_DM", "Type Here")
+    Weight = st.text_input("Weight(cm)", "Type Here")
+    Height= st.text_input("Height(cm)", "Type Here")
+    BMI = st.text_input("BMI", "Type Here")
+    Upper_Leg_Length = st.text_input("Upper_Leg_Length", "Type Here")
+    
+    Arm_Circum = st.text_input("Arm_Circum", "Type Here")
+    Waist_Circum = st.text_input("Waist_Circum", "Type Here")
+    Triceps_Skinfold = st.text_input("Triceps_Skinfold", "Type Here")
+    Subscapular_Skinfold = st.text_input("Subscapular_Skinfold", "Type Here")
+    albumin	= st.text_input("Albumin", "Type Here")
+    Blood_urea_nitrogen = st.text_input("Blood_urea_nitrogen", "Type Here")
+    Creatinine = st.text_input("Creatinine", "Type Here")
 
 
 
