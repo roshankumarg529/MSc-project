@@ -1,15 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Jun 13 02:20:31 2020
-
-@author: Krish Naik
-"""
-
-# -*- coding: utf-8 -*-
-"""
-Created on Fri May 15 12:50:04 2020
-
-@author: krish.naik
+@author: Roshan kumar
 """
 
 
@@ -87,7 +78,7 @@ def main():
     </div>
     """
     st.markdown(html_temp,unsafe_allow_html=True)
-    sex = st.text_input("Sex","Type Here")
+    sex = st.selectbox("Select your Gender",("Male","Female"))
     age = st.text_input("Age","Type Here")
     Race_Ethnicity = st.text_input("Race/Ethnicity","Type Here")
 
@@ -107,7 +98,10 @@ def main():
     Blood_urea_nitrogen = st.text_input("Blood_urea_nitrogen", "Type Here")
     Creatinine = st.text_input("Creatinine", "Type Here")
 
-
+    if sex == "Male":
+        sex == 1
+    else:
+        sex == 2
 
     result=""
     if st.button("Predict"):
