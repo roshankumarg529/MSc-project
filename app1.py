@@ -27,36 +27,7 @@ def predict_note_authentication(sex,age,Race_Ethnicity,income,On_Insulin_Dia_Med
                                 Weight,	Height,	BMI,Upper_Leg_Length,Upper_Arm_Length,
                                 Arm_Circum,	Waist_Circum,	Triceps_Skinfold,Subscapular_Skinfold, albumin,
                                 Blood_urea_nitrogen, Creatinine):
-    
-    """Let's Authenticate the Banks Note 
-    This is using docstrings for specifications.
-    ---
-
-    #sex	age	Race_Ethnicity	income	On_Insulin_Dia_Meds	Diag_DM/Pre_DM	Weight(kg)	Height(cm)	BMI	Upper_Leg_Length
-# Upper_Arm_Length	Arm_Circum	Waist_Circum	Triceps_Skinfold
-# Subscapular_Skinfold	Glycohemoglobin(%)	albumin	Blood_urea_nitrogen	Creatinine	Diabetes_level
-    parameters:  
-      - name: variance
-        in: query
-        type: number
-        required: true
-      - name: skewness
-        in: query
-        type: number
-        required: true
-      - name: curtosis
-        in: query
-        type: number
-        required: true
-      - name: entropy
-        in: query
-        type: number
-        required: true
-    responses:
-        200:
-            description: The output values
-        
-    """
+   
    
     prediction=classifier.predict([[sex,age,Race_Ethnicity,income,On_Insulin_Dia_Meds, Diag_DM_Pre_DM,
                                 Weight,	Height,	BMI, Upper_Leg_Length,Upper_Arm_Length,
@@ -99,13 +70,13 @@ def main():
     Creatinine = st.text_input("Creatinine", "Type Here")
 
     if sex == "Male":
-        sex == 1
+        s == 1
     else:
-        sex == 2
+        s == 2
 
     result=""
     if st.button("Predict"):
-        result=predict_note_authentication(sex,age,Race_Ethnicity,income,On_Insulin_Dia_Meds, Diag_DM_Pre_DM,
+        result=predict_note_authentication(s,age,Race_Ethnicity,income,On_Insulin_Dia_Meds, Diag_DM_Pre_DM,
                                 Weight,	Height,	BMI,Upper_Leg_Length,Upper_Arm_Length,
                                 Arm_Circum,	Waist_Circum,	Triceps_Skinfold,Subscapular_Skinfold, albumin,
                                 Blood_urea_nitrogen, Creatinine)
