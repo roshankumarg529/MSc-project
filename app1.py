@@ -69,7 +69,7 @@ def main():
     Blood_urea_nitrogen = st.text_input("Blood_urea_nitrogen")
     Creatinine = st.text_input("Creatinine")
     
-    s = ""
+    s = 0
 
     if sex == "Male":
         s == 1
