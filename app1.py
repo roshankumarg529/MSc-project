@@ -148,14 +148,19 @@ def main():
     res = ""
     if (result == 0):
         res = "You are Risk Free"
-        st.success(res)
+        #st.success(res)
     elif (result == 1):
         res = "You have the Risk of Pre-Diabetic"
-        st.error(res)
+        #st.error(res)
+        html_temp = """
+        <div style="background-color:red;padding:1.5px">
+        <h1 style="color:white;text-align:center;">res </h1>
+        </div><br>"""
+        st.markdown(html_temp,unsafe_allow_html=True)
         
     elif (result == 2):
         res = "You are on the Hight-Risk of Diabetic Please consult the doctor"
-        st.error(res)
+        #st.error(res)
         
      
     
