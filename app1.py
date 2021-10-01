@@ -45,29 +45,31 @@ def main():
     st.title("Diabetic Risk Prediction")
     html_temp = """
     <div style="background-color:tomato;padding:10px">
-    <h2 style="color:white;text-align:center;">Streamlit Bank Authenticator ML App </h2>
+    <h2 style="color:white;text-align:center;">Diabetic Risk Prediction App </h2>
     </div>
     """
     st.markdown(html_temp,unsafe_allow_html=True)
     sex = st.selectbox("Select your Gender",("Male","Female"))
-    age = st.text_input("Age","Type Here")
-    Race_Ethnicity = st.text_input("Race/Ethnicity","Type Here")
+    age = st.text_input("Age")
+    Race_Ethnicity = st.text_input("Race/Ethnicity")
 
     income = st.text_input("Income","Type Here")
-    On_Insulin_Dia_Meds = st.text_input("On_Insulin/Dia_Meds", "Type Here")
-    Diag_DM_Pre_DM = st.text_input("Diag_DM/Pre_DM", "Type Here")
-    Weight = st.text_input("Weight(cm)", "Type Here")
-    Height= st.text_input("Height(cm)", "Type Here")
+    On_Insulin_Dia_Meds = st.text_input("On_Insulin/Dia_Meds")
+    Diag_DM_Pre_DM = st.text_input("Diag_DM/Pre_DM")
+    Weight = st.text_input("Weight(cm)")
+    Height= st.text_input("Height(cm)")
     BMI = st.text_input("BMI", "Type Here")
-    Upper_Leg_Length = st.text_input("Upper_Leg_Length", "Type Here")
-    Upper_Arm_Length = st.text_input("Upper_Arm_Length", "Type Here")
-    Arm_Circum = st.text_input("Arm_Circum", "Type Here")
-    Waist_Circum = st.text_input("Waist_Circum", "Type Here")
-    Triceps_Skinfold = st.text_input("Triceps_Skinfold", "Type Here")
-    Subscapular_Skinfold = st.text_input("Subscapular_Skinfold", "Type Here")
+    Upper_Leg_Length = st.text_input("Upper_Leg_Length")
+    Upper_Arm_Length = st.text_input("Upper_Arm_Length")
+    Arm_Circum = st.text_input("Arm_Circum")
+    Waist_Circum = st.text_input("Waist_Circum")
+    Triceps_Skinfold = st.text_input("Triceps_Skinfold")
+    Subscapular_Skinfold = st.text_input("Subscapular_Skinfold")
     albumin	= st.text_input("Albumin", "Type Here")
-    Blood_urea_nitrogen = st.text_input("Blood_urea_nitrogen", "Type Here")
-    Creatinine = st.text_input("Creatinine", "Type Here")
+    Blood_urea_nitrogen = st.text_input("Blood_urea_nitrogen")
+    Creatinine = st.text_input("Creatinine")
+    
+    s = ""
 
     if sex == "Male":
         s == 1
