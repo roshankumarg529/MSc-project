@@ -106,31 +106,31 @@ def main():
     else:
         Predb = 0
         
-   incm = 0
+    incm = 0
    
-   if (income ==  "<5000"):
+    if (income ==  "<5000"):
         incm = 1
-   elif (income == "Greater than 5000 & Less than 10000"):
+    elif (income == "Greater than 5000 & Less than 10000"):
         incm = 2
-   elif (income == "Greater than or equal to 10000 & Less than 15000"):
+    elif (income == "Greater than or equal to 10000 & Less than 15000"):
         incm = 3                          
-   elif (income == "Greater than or equal to 15000 & Less than 20000"):
+    elif (income == "Greater than or equal to 15000 & Less than 20000"):
         incm = 4                          
-   elif (income == "Greater than or equal to 20000 & Less than 25000"):
+    elif (income == "Greater than or equal to 20000 & Less than 25000"):
         incm = 5                          
-   elif (income == "Greater than or equal to 25000 & Less than 35000"):
+    elif (income == "Greater than or equal to 25000 & Less than 35000"):
         incm = 6                                              
-   elif (income == "Greater than or equal to 35000 & Less than 45000"):
+    elif (income == "Greater than or equal to 35000 & Less than 45000"):
         incm = 7                                             
-   elif (income == "Greater than or equal to 45000 & Less than 55000" ):
+    elif (income == "Greater than or equal to 45000 & Less than 55000" ):
         incm = 8                                           
-   elif (income == "Greater than or equal to 55000 & Less than 65000"):
+    elif (income == "Greater than or equal to 55000 & Less than 65000"):
         incm = 9                                             
-   elif (income == "Greater than or equal to 65000 & Less than 75000"):
+    elif (income == "Greater than or equal to 65000 & Less than 75000"):
         incm = 10                                             
-   elif (income == "Greater than or equal to 75000 & Less than 100000" ):
+    elif (income == "Greater than or equal to 75000 & Less than 100000" ):
         incm = 11                         
-   elif (income == ">= 100000"):
+    elif (income == ">= 100000"):
         incm = 12                          
                           
                           
