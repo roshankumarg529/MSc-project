@@ -42,7 +42,7 @@ def predict_note_authentication(s,age,Race_Ethnicity,income,On_Insulin_Dia_Meds,
 
 
 def main():
-    st.title("Bank Authenticator")
+    st.title("Diabetic Risk Prediction")
     html_temp = """
     <div style="background-color:tomato;padding:10px">
     <h2 style="color:white;text-align:center;">Streamlit Bank Authenticator ML App </h2>
