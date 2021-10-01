@@ -51,14 +51,14 @@ def main():
     st.markdown(html_temp,unsafe_allow_html=True)
     sex = st.selectbox("Select your Gender",("Male","Female"))
     age = st.text_input("Age")
-    Race_Ethnicity = st.text_input("Race/Ethnicity")
+    Race_Ethnicity = st.selectbox("Select your Race/Ethnicity",("Mexican American","Non-Hispanic White","Non-Hispanic Black","Other Hispanic","Other Race Including Multi-Racial"))
 
-    income = st.text_input("Income","Type Here")
+    income = st.text_input("Income")
     On_Insulin_Dia_Meds = st.text_input("On_Insulin/Dia_Meds")
     Diag_DM_Pre_DM = st.text_input("Diag_DM/Pre_DM")
     Weight = st.text_input("Weight(cm)")
     Height= st.text_input("Height(cm)")
-    BMI = st.text_input("BMI", "Type Here")
+    BMI = st.text_input("BMI")
     Upper_Leg_Length = st.text_input("Upper_Leg_Length")
     Upper_Arm_Length = st.text_input("Upper_Arm_Length")
     Arm_Circum = st.text_input("Arm_Circum")
@@ -70,12 +70,26 @@ def main():
     Creatinine = st.text_input("Creatinine")
     
     s = 0
-
     if sex == "Male":
         s == 1
     else:
         s == 2
 
+     Race_Ethnicity = 0
+    if (Race_Ethnicity == "Non-Hispanic White"):
+        Race_Ethnicity == 1
+    elif (Race_Ethnicity == "Non-Hispanic Black"):
+        Race_Ethnicity == 2
+     elif (Race_Ethnicity == "Mexican American"):
+        Race_Ethnicity == 3
+     elif (Race_Ethnicity == "Other Hispanic"):
+        Race_Ethnicity == 4
+     elif (Race_Ethnicity == "Other Race Including Multi-Racial"):
+        Race_Ethnicity == 5
+        
+        
+        
+        
     result=""
     if st.button("Predict"):
         result=predict_note_authentication(s,age,Race_Ethnicity,income,On_Insulin_Dia_Meds, Diag_DM_Pre_DM,
