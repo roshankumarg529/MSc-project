@@ -71,9 +71,9 @@ def main():
     
     s = 0
     if sex == "Male":
-        s == 1
+        s = 1
     else:
-        s == 2
+        s = 2
 
     Race = 0
     if (Race_Ethnicity == "Non-Hispanic White"):
