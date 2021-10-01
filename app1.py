@@ -56,21 +56,21 @@ def main():
     income = st.selectbox("Income per month", ("--select--","<5000", "Greater than 5000 & Less than 10000" ,"Greater than or equal to 10000 & Less than 15000" ,"Greater than or equal to 15000 & Less than 20000" ,"Greater than or equal to 20000 & Less than 25000" ,
                                               "Greater than or equal to 25000 & Less than 35000" ,"Greater than or equal to 35000 & Less than 45000" ,"Greater than or equal to 45000 & Less than 55000" ,
                                               "Greater than 55000 & Less than 65000" ,
-                                              "Greater than or equal to 65000 & Less than 75000" ,"Greater than or equal to 75000 & Less than 100000" ,">= 100000")
+                                              "Greater than or equal to 65000 & Less than 75000" ,"Greater than or equal to 75000 & Less than 100000" ,">= 100000"))
     On_Insulin_Dia_Meds = st.selectbox("On_Insulin/Dia_Meds", ("--select--","Yes", "No"))
     Diag_DM_Pre_DM = st.selectbox("Diag_DM_Pre_DM", ("--select--","Yes", "No"))
-    Weight = st.text_input("Weight(cm)")
+    Weight = st.text_input("Weight(kg)")
     Height= st.text_input("Height(cm)")
-    BMI = st.text_input("BMI")
-    Upper_Leg_Length = st.text_input("Upper_Leg_Length")
-    Upper_Arm_Length = st.text_input("Upper_Arm_Length")
-    Arm_Circum = st.text_input("Arm_Circum")
-    Waist_Circum = st.text_input("Waist_Circum")
-    Triceps_Skinfold = st.text_input("Triceps_Skinfold")
-    Subscapular_Skinfold = st.text_input("Subscapular_Skinfold")
-    albumin	= st.text_input("Albumin", "Type Here")
-    Blood_urea_nitrogen = st.text_input("Blood_urea_nitrogen")
-    Creatinine = st.text_input("Creatinine")
+    BMI = st.text_input("BMI (kg/m^2")
+    Upper_Leg_Length = st.text_input("Upper_Leg_Length (cm)")
+    Upper_Arm_Length = st.text_input("Upper_Arm_Length (cm)")
+    Arm_Circum = st.text_input("Arm_Circum (cm)")
+    Waist_Circum = st.text_input("Waist_Circum (cm)")
+    Triceps_Skinfold = st.text_input("Triceps_Skinfold (mm)")
+    Subscapular_Skinfold = st.text_input("Subscapular_Skinfold (mm)")
+    albumin	= st.text_input("Albumin (g/dL)")
+    Blood_urea_nitrogen = st.text_input("Blood_urea_nitrogen (mg/dL)")
+    Creatinine = st.text_input("Creatinine (mg/dL)")
     
     s = 0
     if sex == "Male":
