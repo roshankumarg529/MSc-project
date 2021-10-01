@@ -155,7 +155,7 @@ def main():
         
     elif (result == 2):
         res = "You are on the Hight-Risk of Diabetic Please consult the doctor"
-        st.warning(res)
+        st.error(res)
         
      
     
