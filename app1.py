@@ -75,17 +75,17 @@ def main():
     else:
         s == 2
 
-     Race_Ethnicity = 0
+    Race = 0
     if (Race_Ethnicity == "Non-Hispanic White"):
-        Race_Ethnicity == 1
+        Race == 1
     elif (Race_Ethnicity == "Non-Hispanic Black"):
-        Race_Ethnicity == 2
+        Race == 2
     elif (Race_Ethnicity == "Mexican American"):
-        Race_Ethnicity == 3
+        Race == 3
     elif (Race_Ethnicity == "Other Hispanic"):
-        Race_Ethnicity == 4
+        Race == 4
     elif (Race_Ethnicity == "Other Race Including Multi-Racial"):
-        Race_Ethnicity == 5
+        Race == 5
         
         
         
