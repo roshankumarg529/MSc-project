@@ -80,11 +80,11 @@ def main():
         Race_Ethnicity == 1
     elif (Race_Ethnicity == "Non-Hispanic Black"):
         Race_Ethnicity == 2
-     elif (Race_Ethnicity == "Mexican American"):
+    elif (Race_Ethnicity == "Mexican American"):
         Race_Ethnicity == 3
-     elif (Race_Ethnicity == "Other Hispanic"):
+    elif (Race_Ethnicity == "Other Hispanic"):
         Race_Ethnicity == 4
-     elif (Race_Ethnicity == "Other Race Including Multi-Racial"):
+    elif (Race_Ethnicity == "Other Race Including Multi-Racial"):
         Race_Ethnicity == 5
         
         
