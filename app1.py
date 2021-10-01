@@ -23,13 +23,13 @@ def welcome():
     return "Welcome All"
 
 #@app.route('/predict',methods=["Get"])
-def predict_note_authentication(s,age,Race,income,On_Insulin_Dia_Meds, Diag_DM_Pre_DM,
+def predict_note_authentication(s,age,Race,incm,onIn, Predb,
                                 Weight,	Height,	BMI,Upper_Leg_Length,Upper_Arm_Length,
                                 Arm_Circum,	Waist_Circum,	Triceps_Skinfold,Subscapular_Skinfold, albumin,
                                 Blood_urea_nitrogen, Creatinine):
    
    
-    prediction=classifier.predict([[s,age,Race,income,On_Insulin_Dia_Meds, Diag_DM_Pre_DM,
+    prediction=classifier.predict([[s,age,Race,incm,onIn, Predb,
                                 Weight,	Height,	BMI, Upper_Leg_Length,Upper_Arm_Length,
                                 Arm_Circum,	Waist_Circum,	Triceps_Skinfold,Subscapular_Skinfold, albumin,
                                 Blood_urea_nitrogen, Creatinine]])
@@ -49,13 +49,16 @@ def main():
     </div>
     """
     st.markdown(html_temp,unsafe_allow_html=True)
-    sex = st.selectbox("Select your Gender",("Male","Female"))
+    sex = st.selectbox("Select your Gender",("--select--","Male","Female"))
     age = st.text_input("Age")
-    Race_Ethnicity = st.selectbox("Select your Race/Ethnicity",("Mexican American","Non-Hispanic White","Non-Hispanic Black","Other Hispanic","Other Race Including Multi-Racial"))
+    Race_Ethnicity = st.selectbox("Select your Race/Ethnicity",("--select--","Mexican American","Non-Hispanic White","Non-Hispanic Black","Other Hispanic","Other Race Including Multi-Racial"))
 
-    income = st.text_input("Income")
-    On_Insulin_Dia_Meds = st.text_input("On_Insulin/Dia_Meds")
-    Diag_DM_Pre_DM = st.text_input("Diag_DM/Pre_DM")
+    income = st.selectbox("Income per month", ("--select--","<5000", "Greater than 5000 & Less than 10000" ,"Greater than or equal to 10000 & Less than 15000" ,"Greater than or equal to 15000 & Less than 20000" ,"Greater than or equal to 20000 & Less than 25000" ,
+                                              "Greater than or equal to 25000 & Less than 35000" ,"Greater than or equal to 35000 & Less than 45000" ,"Greater than or equal to 45000 & Less than 55000" ,
+                                              "Greater than 55000 & Less than 65000" ,
+                                              "Greater than or equal to 65000 & Less than 75000" ,"Greater than or equal to 75000 & Less than 100000" ,">= 100000")
+    On_Insulin_Dia_Meds = st.selectbox("On_Insulin/Dia_Meds", ("--select--","Yes", "No"))
+    Diag_DM_Pre_DM = st.selectbox("Diag_DM_Pre_DM", ("--select--","Yes", "No"))
     Weight = st.text_input("Weight(cm)")
     Height= st.text_input("Height(cm)")
     BMI = st.text_input("BMI")
@@ -88,11 +91,57 @@ def main():
         Race = 5
         
         
+    onIn = 0
+    
+    if (On_Insulin_Dia_Meds == "Yes"):
+        onIn = 1
+    else:
+        onIn = 0
+ 
+
+    Predb = 0
+    
+    if (Diag_DM_Pre_DM == "Yes"):
+        Predb = 1
+    else:
+        Predb = 0
         
-        
+   incm = 0
+   
+   if (income ==  "<5000"):
+        incm = 1
+   elif (income == "Greater than 5000 & Less than 10000"):
+        incm = 2
+   elif (income == "Greater than or equal to 10000 & Less than 15000"):
+        incm = 3                          
+   elif (income == "Greater than or equal to 15000 & Less than 20000"):
+        incm = 4                          
+   elif (income == "Greater than or equal to 20000 & Less than 25000"):
+        incm = 5                          
+   elif (income == "Greater than or equal to 25000 & Less than 35000"):
+        incm = 6                                              
+   elif (income == "Greater than or equal to 35000 & Less than 45000"):
+        incm = 7                                             
+   elif (income == "Greater than or equal to 45000 & Less than 55000" ):
+        incm = 8                                           
+   elif (income == "Greater than or equal to 55000 & Less than 65000"):
+        incm = 9                                             
+   elif (income == "Greater than or equal to 65000 & Less than 75000"):
+        incm = 10                                             
+   elif (income == "Greater than or equal to 75000 & Less than 100000" ):
+        incm = 11                         
+   elif (income == ">= 100000"):
+        incm = 12                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
     result=""
     if st.button("Predict"):
-        result=predict_note_authentication(s,age,Race,income,On_Insulin_Dia_Meds, Diag_DM_Pre_DM,
+        result=predict_note_authentication(s,age,Race,incm,onIn, Predb,
                                 Weight,	Height,	BMI,Upper_Leg_Length,Upper_Arm_Length,
                                 Arm_Circum,	Waist_Circum,	Triceps_Skinfold,Subscapular_Skinfold, albumin,
                                 Blood_urea_nitrogen, Creatinine)
