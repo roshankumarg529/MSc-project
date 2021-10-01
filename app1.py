@@ -96,10 +96,18 @@ def main():
                                 Weight,	Height,	BMI,Upper_Leg_Length,Upper_Arm_Length,
                                 Arm_Circum,	Waist_Circum,	Triceps_Skinfold,Subscapular_Skinfold, albumin,
                                 Blood_urea_nitrogen, Creatinine)
-    st.success('The output is {}'.format(result))
+    res = ""
+    if (result == 0):
+        res = "You are Risk Free"
+    if (result == 1):
+        res = "You have the Risk of Pre-Diabetic"
+    if (result == 2):
+        res = "You are on the Hight-Risk of Diabetic Please consult the doctor"
+     
+    st.success(res)
     if st.button("About"):
-        st.text("Lets LEarn")
-        st.text("Built with Streamlit")
+        st.text("MSc project")
+        #st.text("Built with Streamlit")
 
 if __name__=='__main__':
     main()
