@@ -23,13 +23,13 @@ def welcome():
     return "Welcome All"
 
 #@app.route('/predict',methods=["Get"])
-def predict_note_authentication(sex,age,Race_Ethnicity,income,On_Insulin_Dia_Meds, Diag_DM_Pre_DM,
+def predict_note_authentication(s,age,Race_Ethnicity,income,On_Insulin_Dia_Meds, Diag_DM_Pre_DM,
                                 Weight,	Height,	BMI,Upper_Leg_Length,Upper_Arm_Length,
                                 Arm_Circum,	Waist_Circum,	Triceps_Skinfold,Subscapular_Skinfold, albumin,
                                 Blood_urea_nitrogen, Creatinine):
    
    
-    prediction=classifier.predict([[sex,age,Race_Ethnicity,income,On_Insulin_Dia_Meds, Diag_DM_Pre_DM,
+    prediction=classifier.predict([[s,age,Race_Ethnicity,income,On_Insulin_Dia_Meds, Diag_DM_Pre_DM,
                                 Weight,	Height,	BMI, Upper_Leg_Length,Upper_Arm_Length,
                                 Arm_Circum,	Waist_Circum,	Triceps_Skinfold,Subscapular_Skinfold, albumin,
                                 Blood_urea_nitrogen, Creatinine]])
