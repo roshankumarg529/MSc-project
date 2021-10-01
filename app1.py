@@ -148,12 +148,19 @@ def main():
     res = ""
     if (result == 0):
         res = "You are Risk Free"
-    if (result == 1):
+        st.success(res)
+    elif (result == 1):
         res = "You have the Risk of Pre-Diabetic"
-    if (result == 2):
+        st.warning(res)
+        
+    elif (result == 2):
         res = "You are on the Hight-Risk of Diabetic Please consult the doctor"
+        st.warning(res)
+        
      
-    st.success(res)
+    
+    
+    
     if st.button("About"):
         st.text("MSc project")
         #st.text("Built with Streamlit")
