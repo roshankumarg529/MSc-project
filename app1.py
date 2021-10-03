@@ -42,7 +42,7 @@ def predict_note_authentication(s,age,Race,incm,onIn, Predb,
 
 
 def main():
-    st.title("Diabetic Risk Prediction")
+    #st.title("Diabetic Risk Prediction")
     html_temp = """
     <div style="background-color:tomato;padding:10px">
     <h2 style="color:white;text-align:center;">Diabetic Risk Prediction App </h2>
@@ -55,7 +55,7 @@ def main():
 
     income = st.selectbox("Income per month", ("--select--","<5000", "Greater than or equal to 5000 & Less than 10000" ,"Greater than or equal to 10000 & Less than 15000" ,"Greater than or equal to 15000 & Less than 20000" ,"Greater than or equal to 20000 & Less than 25000" ,
                                               "Greater than or equal to 25000 & Less than 35000" ,"Greater than or equal to 35000 & Less than 45000" ,"Greater than or equal to 45000 & Less than 55000" ,
-                                              "Greater than 55000 & Less than 65000" ,
+                                              "Greater than or equal to 55000 & Less than 65000" ,
                                               "Greater than or equal to 65000 & Less than 75000" ,"Greater than or equal to 75000 & Less than 100000" ,">= 100000"))
     On_Insulin_Dia_Meds = st.selectbox("On_Insulin/Dia_Meds", ("--select--","Yes", "No"))
     Diag_DM_Pre_DM = st.selectbox("Diag_DM_Pre_DM", ("--select--","Yes", "No"))
@@ -167,8 +167,8 @@ def main():
         res = "You are on the Hight-Risk of Diabetic please consult the doctor"
         #st.error(res)
         html_temp2 = """
-        <div style="background-color:orange;padding:1.5px">
-        <h2 style="color:white;text-align:center;"> You are on the Hight-Risk of Diabetic please consult the doctor </h2>
+        <div style="background-color:red;padding:1.5px">
+        <h3 style="color:white;text-align:center;"> You are on the Hight-Risk of Diabetic please consult the doctor </h3>
         </div><br>"""
         st.markdown(html_temp2,unsafe_allow_html=True)        
         
