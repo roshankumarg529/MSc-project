@@ -53,7 +53,7 @@ def main():
     age = st.text_input("Age")
     Race_Ethnicity = st.selectbox("Select your Race/Ethnicity",("--select--","Mexican American","Non-Hispanic White","Non-Hispanic Black","Other Hispanic","Other Race Including Multi-Racial"))
 
-    income = st.selectbox("Income per month", ("--select--","<5000", "Greater than 5000 & Less than 10000" ,"Greater than or equal to 10000 & Less than 15000" ,"Greater than or equal to 15000 & Less than 20000" ,"Greater than or equal to 20000 & Less than 25000" ,
+    income = st.selectbox("Income per month", ("--select--","<5000", "Greater than or equal to 5000 & Less than 10000" ,"Greater than or equal to 10000 & Less than 15000" ,"Greater than or equal to 15000 & Less than 20000" ,"Greater than or equal to 20000 & Less than 25000" ,
                                               "Greater than or equal to 25000 & Less than 35000" ,"Greater than or equal to 35000 & Less than 45000" ,"Greater than or equal to 45000 & Less than 55000" ,
                                               "Greater than 55000 & Less than 65000" ,
                                               "Greater than or equal to 65000 & Less than 75000" ,"Greater than or equal to 75000 & Less than 100000" ,">= 100000"))
@@ -61,7 +61,7 @@ def main():
     Diag_DM_Pre_DM = st.selectbox("Diag_DM_Pre_DM", ("--select--","Yes", "No"))
     Weight = st.text_input("Weight(kg)")
     Height= st.text_input("Height(cm)")
-    BMI = st.text_input("BMI (kg/m^2")
+    BMI = st.text_input("BMI (kg/m^2)")
     Upper_Leg_Length = st.text_input("Upper_Leg_Length (cm)")
     Upper_Arm_Length = st.text_input("Upper_Arm_Length (cm)")
     Arm_Circum = st.text_input("Arm_Circum (cm)")
@@ -150,29 +150,34 @@ def main():
         res = "You are Risk Free"
         html_temp = """
         <div style="background-color:green;padding:1.5px">
-        <h1 style="color:white;text-align:center;"> Hurray! you are Risk-Free </h1>
+        <h2 style="color:white;text-align:center;"> Hurray! you are Risk-Free </h2>
         </div><br>"""
         st.markdown(html_temp,unsafe_allow_html=True)
         #st.success(res)
     elif (result == 1):
         res = "You have the Risk of Pre-Diabetic"
         #st.error(res)
-        html_temp = """
+        html_temp1 = """
         <div style="background-color:orange;padding:1.5px">
-        <h1 style="color:white;text-align:center;"> You have the Risk of Pre-Diabetic </h1>
+        <h2 style="color:white;text-align:center;"> You have the Risk of Pre-Diabetic </h2>
         </div><br>"""
-        st.markdown(html_temp,unsafe_allow_html=True)
+        st.markdown(html_temp1,unsafe_allow_html=True)
         
     elif (result == 2):
         res = "You are on the Hight-Risk of Diabetic please consult the doctor"
         #st.error(res)
+        html_temp2 = """
+        <div style="background-color:orange;padding:1.5px">
+        <h2 style="color:white;text-align:center;"> You are on the Hight-Risk of Diabetic please consult the doctor </h2>
+        </div><br>"""
+        st.markdown(html_temp2,unsafe_allow_html=True)        
         
      
     
     
     
     if st.button("About"):
-        st.text("MSc project")
+        st.text("Developed by Roshan kumar")
         #st.text("Built with Streamlit")
 
 if __name__=='__main__':
