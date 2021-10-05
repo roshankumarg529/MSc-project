@@ -168,7 +168,7 @@ def main():
         #st.error(res)
         html_temp2 = """
         <div style="background-color:red;padding:1.5px">
-        <h3 style="color:white;text-align:center;"> You are on the Hight-Risk of Diabetic please consult the doctor </h3>
+        <h3 style="color:white;text-align:center;"> You are on the high-risk of Diabetes please consult the doctor </h3>
         </div><br>"""
         st.markdown(html_temp2,unsafe_allow_html=True)        
         
